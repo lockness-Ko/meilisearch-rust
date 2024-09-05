@@ -57,14 +57,14 @@ pub struct SearchResult<T> {
     pub ranking_score_details: Option<Map<String, Value>>,
 }
 
-#[derive(Deserialize, Debug, Clone)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct FacetStats {
     pub min: f64,
     pub max: f64,
 }
 
-#[derive(Deserialize, Debug, Clone)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "camelCase")]
 /// A struct containing search results and other information about the search.
 pub struct SearchResults<T> {
